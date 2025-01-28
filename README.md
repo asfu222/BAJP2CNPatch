@@ -13,6 +13,7 @@
 作者将在脚本内留一个文件服务器链接。但是，不要指望作者维护这个链接
 
 [资源库](https://github.com/asfu222/BAJP2CNResources)
+[资源链接](https://asfu222.github.io/BAJP2CNResources/)
 
 **如果作者链接失效**：
 
@@ -36,8 +37,8 @@
 
 - 游戏会打乱某些文件名。你需要自行判断并把名字改回去
 - 如果你有备用安卓设备/模拟器，可以用OurPlay的汉化资源
-- （推荐渠道）[99手游加速器](https://www.99jiasu.net/)：汉化后，到`/Android/data/com.YostarJP.BlueArchive/` 找寻
-- [OurPlay](https://m.ourplay.net/): 汉化后，到`/Android/data/com.excean.gspace/gameplugins/com.YostarJP.BlueArchive/` 找寻
+- （推荐渠道）[99手游加速器](https://www.99jiasu.net/)：汉化后，到`/Android/data/com.YostarJP.BlueArchive/files/` 找寻
+- [OurPlay](https://m.ourplay.net/): 汉化后，到`/Android/data/com.excean.gspace/gameplugins/com.YostarJP.BlueArchive/files/` 找寻
 ## 教程
 ### 在运行前，需进行以下步骤
  ### - 电脑需要安装[mitmproxy](https://mitmproxy.org/)
@@ -49,7 +50,7 @@
 会弹出个`mitmproxy`设置网页窗口
 - 脚本默认使用`WireGuard`协议代理请求。也可以在`Capture`设置内打开其它协议->使用`HTTP`，`SOCKS5`，或其它的协议代理
 - iOS内，`HTTP`在`WiFi设置`可以设置HTTP代理：默认`http://电脑IP:8080`
-- 如果你有QuantumultX，Loon，Surge等可以用`SOCKS5`代理：默认`http://电脑IP:1080`
+- 如果你有QuantumultX，Loon，Surge等可以用`SOCKS5`代理：默认`socks5://电脑IP:1080`
 
 ### WireGuard协议
 请在`Capture`找到`WireGuard`的二维码，在手机`WireGuard`APP上扫描并添加VPN
@@ -69,4 +70,5 @@
 ## 常见错误
   ### - Client TLS handshake failed. The client may not trust the proxy's certificate for ... -> 没给`mitmproxy` `Root`证书权限
   ### - `mitm.it`啥都没有/没有证书下载界面 -> 请确认你用的是`http`，而非`https`
+  ### - 不知道BA版本号怎么办？-> 可以打开游戏用这脚本内`mitmproxy`内`flow list`查找含有官网网址的链接：列如`GET https://prod-clientpatch.bluearchiveyostar.com/r76_odfuvebzfonktr6yf71a_3/TableBundles/ExcelDB.db`。类似请求有很多，把r开头的那个复制就行了。也可以去改脚本，只检查最后文件名，然后文件名一样的就下载某资源。
   ### - 不知道还有什么其它常见问题，这个教程应该很详细了
