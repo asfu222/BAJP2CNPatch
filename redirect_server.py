@@ -26,6 +26,8 @@ BA_FS_HOSTS = [
 
 def request(flow: http.HTTPFlow) -> None:
     if flow.request.pretty_host in BA_FS_HOSTS:
+        if False: # 如果不知道BA版本号/服务器没有版本号，请把这个改成True。如果这个改成True，且作者/服务器主没更新latest资源包，会出现游戏内没有文字显现的bug
+            flow.request.path = '/latest/' + '/'.join(flow.request.path.split('/')[2:])
         file_server_url = f'http://{FILE_SERVER_HOST}:{FILE_SERVER_PORT}{flow.request.path}'
         try:
             response = requests.head(file_server_url, timeout=5)
