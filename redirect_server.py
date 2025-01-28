@@ -12,9 +12,12 @@ def get_local_ip():
         return "127.0.0.1"
 
 # 文件服务器
-FILE_SERVER_SCHEME = 'http' # 服务器网络协议（通常是http或https）
-FILE_SERVER_HOST = get_local_ip() # 服务器网址
-FILE_SERVER_PORT = 8000 # 服务器端口`
+FILE_SERVER_SCHEME = 'https' # 服务器网络协议（通常是http或https）
+# FILE_SERVER_SCHEME = 'http' 本地服务器
+FILE_SERVER_HOST = 'asfu222.github.io/BAJP2CNResources/assets/' # 服务器网址
+# FILE_SERVER_HOST = get_local_ip() # 本地服务器
+FILE_SERVER_PORT = 443 # 服务器端口
+# FILE_SERVER_PORT = 8000 # 本地服务器
 
 # 官方资源服务器
 BA_FS_HOSTS = [
