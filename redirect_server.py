@@ -27,10 +27,11 @@ BA_FS_HOSTS = [
 
 def request(flow: http.HTTPFlow) -> None:
     if flow.request.pretty_host in BA_FS_HOSTS:
+        new_path = flow.request.path
         if False: # 如果不知道BA版本号/服务器没有版本号，请把这个改成True。<请注意> 如果这个改成True，且作者/服务器主没更新latest资源包，会出现游戏内没有文字显现的bug （汉化落后与日服最新资源包）
-            flow.request.path = '/latest/' + '/'.join(flow.request.path.split('/')[2:])
-        flow.request.path = FILE_SERVER_EXTRA_PATH + flow.request.path
-        file_server_url = f'{FILE_SERVER_SCHEME}://{FILE_SERVER_HOST}:{FILE_SERVER_PORT}{flow.request.path}'
+            new_path = '/latest/' + '/'.join(new_path.split('/')[2:])
+        new_path = FILE_SERVER_EXTRA_PATH + new_path
+        file_server_url = f'{FILE_SERVER_SCHEME}://{FILE_SERVER_HOST}:{FILE_SERVER_PORT}{new_path}'
         try:
             response = requests.head(file_server_url, allow_redirects=True, timeout=5)
             if response.status_code == 200:
@@ -38,6 +39,7 @@ def request(flow: http.HTTPFlow) -> None:
                 flow.request.scheme = FILE_SERVER_SCHEME
                 flow.request.host = FILE_SERVER_HOST
                 flow.request.port = FILE_SERVER_PORT
+                flow.request.path = new_path
         except requests.RequestException as e:
             print(e)
             pass
