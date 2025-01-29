@@ -42,9 +42,18 @@
 - （推荐渠道）[99手游加速器](https://www.99jiasu.net/)：汉化后，到`/Android/data/com.YostarJP.BlueArchive/files/` 找寻
 - [OurPlay](https://m.ourplay.net/): 汉化后，到`/Android/data/com.excean.gspace/gameplugins/com.YostarJP.BlueArchive/files/` 找寻
 
-### 如汉化资源没有`TableBundles/ExcelDB.db`请注意
-你需要从游戏代码中寻找`crc`校验的底层逻辑，列如函数`public static Boolean CheckIntegrity(Int64 crc)`
-的定义。教程内就不说了，需要的话去自己研究
+### 如汉化资源没有`TableBundles/TableCatalog.bytes`请注意
+因为日服的crc校验机制，无法直接用这个汉化资源。需生成一个crc值，文件大小对应的`TableCatalog.bytes`
+
+首先，电脑上下载一个有效的`TableBundles/TableCatalog.bytes`。可以从其它汉化资源库`TableCatalog.bytes`或安卓获得：`Android/data/com.YostarJP.BlueArchive/files/TableBundles/TableCatalog.bytes`
+
+也可以从官方下载，不过需要BA版本号，列如：`https://prod-clientpatch.bluearchiveyostar.com/r76_odfuvebzfonktr6yf71a_3/TableBundles/TableCatalog.bytes`
+
+接下来我们需要根据汉化资源的`TableBundles/ExcelDB.db`生成相应的`TableCatalog.bytes`
+
+把`ExcelDB.db`拖进含有`patch_table_catalog.py`的文件夹。然后运行用`python`运行`patch_table_catalog.py`
+
+脚本吐出来`TableCatalog.bytes`的就是你所需要的。
 
 ## 教程
 ### 在运行前，需进行以下步骤
