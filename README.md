@@ -12,8 +12,8 @@
 ## 如何自行获取汉化资源
 作者将在脚本内留一个文件服务器链接。但是，不要指望作者维护这个链接
 
-[资源库](https://github.com/asfu222/BAJP2CNResources)
-[资源链接](https://asfu222.github.io/BAJP2CNResources/)
+[资源库](https://github.com/asfu222/BACNLocalizationResources)
+[资源链接](https://asfu222.github.io/BACNLocalizationResources/)
 
 **如果作者链接失效**：
 
@@ -47,7 +47,7 @@
 
 首先，电脑上下载一个有效的`TableBundles/TableCatalog.bytes`。可以从其它汉化资源库`TableCatalog.bytes`或安卓获得：`Android/data/com.YostarJP.BlueArchive/files/TableBundles/TableCatalog.bytes`
 
-也可以从官方下载，不过需要BA版本号，列如：`https://prod-clientpatch.bluearchiveyostar.com/r76_odfuvebzfonktr6yf71a_3/TableBundles/TableCatalog.bytes`
+也可以从官方下载，不过需要BA版本号，列如：[`https://prod-clientpatch.bluearchiveyostar.com/r76_odfuvebzfonktr6yf71a_3/TableBundles/TableCatalog.bytes`](https://prod-clientpatch.bluearchiveyostar.com/r76_odfuvebzfonktr6yf71a_3/TableBundles/TableCatalog.bytes)
 
 接下来我们需要根据汉化资源的`TableBundles/ExcelDB.db`生成相应的`TableCatalog.bytes`
 
