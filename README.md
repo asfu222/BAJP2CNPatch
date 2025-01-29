@@ -66,6 +66,10 @@
 
 ### 确保你还是链接到了`mitmproxy`的VPN，然后打开蔚蓝档案日服
 下载完所有文件后，就能看见汉化了
+### 请注意！关于下载速度，什么时候汉化好的问题
+下载完所需文件很快。在能看到主界面时就汉化好了（主界面左下角点开看是汉字）
+此时可以切断`mitmproxy`的VPN了，后面的7G什么的文件不是汉化资源
+如果想用加速器，现在可以用了
 
 ## 常见错误
   ### - Client TLS handshake failed. The client may not trust the proxy's certificate for ... -> 没给`mitmproxy` `Root`证书权限
