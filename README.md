@@ -21,7 +21,9 @@
 
 只需把汉化资源拖进`项目地址/assets/BA版本/正确文件相对地址`
 
-列如：`./assets/r76_odfuvebzfonktr6yf71a_3/TableBundles/ExcelDB.db`
+~~列如：`./assets/r76_odfuvebzfonktr6yf71a_3/TableBundles/ExcelDB.db`~~
+
+现已改，请用这个格式：`./assets/latest/TableBundles/ExcelDB.db`
 
 然后运行 `file_server.cmd` 或 `file_server.sh`即可
 
@@ -39,6 +41,11 @@
 - 如果你有备用安卓设备/模拟器，可以用OurPlay的汉化资源
 - （推荐渠道）[99手游加速器](https://www.99jiasu.net/)：汉化后，到`/Android/data/com.YostarJP.BlueArchive/files/` 找寻
 - [OurPlay](https://m.ourplay.net/): 汉化后，到`/Android/data/com.excean.gspace/gameplugins/com.YostarJP.BlueArchive/files/` 找寻
+
+### 如汉化资源没有`TableBundles/ExcelDB.db`请注意
+你需要从游戏代码中寻找`crc`校验的底层逻辑，列如函数`public static Boolean CheckIntegrity(Int64 crc)`
+的定义。教程内就不说了，需要的话去自己研究
+
 ## 教程
 ### 在运行前，需进行以下步骤
  ### - 电脑需要安装[mitmproxy](https://mitmproxy.org/)
