@@ -40,7 +40,8 @@
 - 游戏会打乱某些文件名。你需要自行判断并把名字改回去
 - 如果你有备用安卓设备/模拟器，可以用OurPlay的汉化资源
 - （推荐渠道）[99手游加速器](https://www.99jiasu.net/)：汉化后，到`/Android/data/com.YostarJP.BlueArchive/files/` 找寻
-- [OurPlay](https://m.ourplay.net/): 汉化后，到`/Android/data/com.excean.gspace/gameplugins/com.YostarJP.BlueArchive/files/` 找寻
+- [OurPlay](https://m.ourplay.net/): 自行找寻模拟器环境。快速找寻需使用`root`，不推荐
+- 从国服获取（需使用特定软件替换文本且从新打包。较为复杂，且没有全部
 
 ### 如汉化资源没有`TableBundles/TableCatalog.bytes`请注意
 因为日服的crc校验机制，无法直接用这个汉化资源。需生成一个crc值，文件大小对应的`TableCatalog.bytes`
