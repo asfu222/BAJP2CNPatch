@@ -3,7 +3,3 @@ hostname = prod-clientpatch.bluearchiveyostar.com
 
 [URL Rewrite]
 ^https://prod-clientpatch\.bluearchiveyostar\.com/.*/TableBundles/(TableCatalog\.bytes|ExcelDB\.db) https://asfu222.github.io/BACNLocalizationResources/shale/latest/TableBundles/$1 302
-
-
-# ^https://prod-clientpatch\.bluearchiveyostar\.com/.*/TableBundles/(TableCatalog\.hash) https://asfu222.github.io/BACNLocalizationResources/static/$1 302
-# 把上面这个注释取消了汉化资源就用云更新了，不过这边还是建议不使用云更新，因为日服更新时新资源可能还没有
