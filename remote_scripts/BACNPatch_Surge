@@ -1,6 +1,6 @@
 [MITM]
 hostname = prod-clientpatch.bluearchiveyostar.com
 [URL Rewrite]
-^https://prod-clientpatch\.bluearchiveyostar\.com/.*/TableBundles/(TableCatalog\.bytes|ExcelDB\.db) https://asfu222.github.io/BACNLocalizationResources/shale/latest/TableBundles/$1 302
-^https://prod-clientpatch\.bluearchiveyostar\.com/.*/TableBundles/(TableCatalog\.hash) https://asfu222.github.io/BACNLocalizationResources/static/$1 302
+^https://prod-clientpatch\.bluearchiveyostar\.com/.*/TableBundles/(TableCatalog\.bytes|ExcelDB\.db) https://cdn.bluearchive.me/new/latest/TableBundles/$1 302
+# ^https://prod-clientpatch\.bluearchiveyostar\.com/.*/TableBundles/(TableCatalog\.hash) https://cdn.bluearchive.me/static/$1 302
 # 上面这个是云更新

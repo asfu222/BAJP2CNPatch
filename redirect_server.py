@@ -14,9 +14,9 @@ def get_local_ip():
 # 文件服务器
 FILE_SERVER_SCHEME = 'https' # 服务器网络协议（通常是http或https）
 # FILE_SERVER_SCHEME = 'http' 本地服务器
-FILE_SERVER_HOST = 'asfu222.github.io' # 服务器网址
+FILE_SERVER_HOST = 'cdn.bluearchive.me' # 服务器网址
 # FILE_SERVER_HOST = get_local_ip() # 本地服务器
-FILE_SERVER_EXTRA_PATH = '/BACNLocalizationResources/shale' # 附加路径，可不填。这里作者填作者的资源地址，可选: shale(国服), ourplay 或 beicheng 汉化包
+FILE_SERVER_EXTRA_PATH = '/new' # 附加路径，可不填。这里作者填作者的资源地址，可选: shale(国服), ourplay 或 beicheng 汉化包
 FILE_SERVER_PORT = 443 # 服务器端口
 # FILE_SERVER_PORT = 8000 # 本地服务器
 
